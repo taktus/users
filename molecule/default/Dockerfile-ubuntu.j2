@@ -1,0 +1,2 @@
+FROM {{ item.image }}
+RUN if [ $(command -v apt-get) ]; then apt-get update && apt-get install -y python3 sudo bash; fi

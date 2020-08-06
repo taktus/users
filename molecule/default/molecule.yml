@@ -1,0 +1,31 @@
+---
+dependency:
+  name: galaxy
+driver:
+  name: docker
+platforms:
+  - name: centos7
+    image: centos:7
+    pre_build_image: true
+    privileged: true
+  - name: ubuntu16
+    image: ubuntu:xenial
+    pre_build_image: false
+    dockerfile: Dockerfile-ubuntu.j2
+    privileged: true
+  - name: ubuntu18
+    image: ubuntu:bionic
+    pre_build_image: false
+    dockerfile: Dockerfile-ubuntu.j2
+    privileged: true
+provisioner:
+  name: ansible
+  log: true
+lint: |
+    set -e
+    ansible-lint
+verifier:
+  name: testinfra
+  lint:
+    name: flake8
+

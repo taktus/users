@@ -1,0 +1,17 @@
+---
+# vars file for bash_color_prompt
+#
+
+users:
+   - username: testuser
+     name: test user
+     ssh_key:
+       - 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEAgF6gviAvCpmfq9hmEBX/Ev46G4b6sE+FdeqYtAACAsdiOfALxYk61yhqr8mC/7OQsw5tzkjNfu3W+8ZuQ3OaSYixEQoCIU0PKa2SjGw3ovniBTrUL74AESdwbTE5+X5wrgou+wIBUaKqSbCokQmFUoTQ73HSlyfpVN0nRSkY7MpC/Toh2o5HVjOf+tNLCHYsGzFMnFECGBPEQ9gDmlurEuO+aporumHH0NpyiiuMt1PnxbNhQ1jMzw2iU1W9NQpkFescE+7yp2XhPWY9rWoVok13QPjMBbMTyPgwm9mBFB5fz/0pGO7c86t6+AuGwwm0j7qzF+VhLPf2pnxRpY3AqQ== testuser@key'
+     password: '$6$rounds=4096$n15DZD3GQpjWWYTc$RLh7jhMXhFMj61x38OZRjd0hOr0po5wATkpaPeWWtGGqa0H4SHzyZ3NBjvtCa/hoUj9whCtUqXTCGR9C3vi1m/'
+     shell: "/bin/bash"
+     groups:
+       - testgroup
+  
+package_list_group:
+  - name: sudo
+    state: latest

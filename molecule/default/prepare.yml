@@ -1,0 +1,22 @@
+- name: Prepare
+  hosts: all
+  gather_facts: yes
+  tasks:
+    - name: debug task
+      debug:
+         msg: "to jest: {{ ansible_facts['distribution'] }}"
+
+    - name: create test group
+      group:
+        name: testgroup
+        state: present     
+
+    - name: install sudo
+      package:
+        name: sudo
+        state: present
+
+    - name: install python3
+      package:
+        name: python3
+        state: present

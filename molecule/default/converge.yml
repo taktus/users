@@ -1,0 +1,13 @@
+---
+- name: Converge
+  hosts: all
+
+  vars_files:
+    - vars/main.yml
+
+  roles:
+
+    - role: taktus.users
+      become: yes
+
+
