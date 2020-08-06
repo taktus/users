@@ -6,8 +6,5 @@
     - vars/main.yml
 
   roles:
-
     - role: taktus.users
       become: yes
-
-
