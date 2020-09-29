@@ -6,7 +6,7 @@
     regexp: '^%admin ALL='
     line: '%admin ALL=(ALL) NOPASSWD: ALL'
     validate: '/usr/sbin/visudo -cf %s'
-  tags: ["nopass", "users", "groups", "configuration"]
+  tags: ["nopass"]
 
 - name: Creating groups
   group: name="{{ item.name }}" gid="{{ item.gid | default(omit) }}"
